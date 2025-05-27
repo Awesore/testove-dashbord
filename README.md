@@ -1,12 +1,41 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Запуск проекта
 
-Currently, two official plugins are available:
+ 1. git clone <repo>
+ 2. cd my-app
+ 3. npm install
+ 4. npm run dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Структура ПРОЕКТА
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ my-app/
+├── public/                 # Статические файлы
+│   └── vite.svg
+├── src/
+│   ├── components/         # Переиспользуемые компоненты
+│   │   ├── Layout.jsx      # Основной лейаут с sidebar
+│   │   └── MetricCard.jsx  # Карточка метрики
+│   ├── data/              # Mock данные
+│   │   └── mockData.js    # Пользователи и метрики
+│   ├── pages/             # Страницы приложения
+│   │   ├── Overview.jsx   # Главная страница с метриками
+│   │   ├── Users.jsx      # Управление пользователями
+│   │   └── Settings.jsx   # Настройки приложения
+│   ├── index.css         # Глобальные стили + Tailwind    
+│   │
+│   ├── App.jsx            # Главный компонент с роутингом
+│   └── main.jsx           # Точка входа приложения
+├── index.html             # HTML шаблон
+├── package.json           # Зависимости и скрипты
+├── tailwind.config.js     # Конфигурация Tailwind
+├── postcss.config.js      # Конфигурация PostCSS
+└── vite.config.js         # Конфигурация Vite
+
+
+Архітектура и реаліція
+    1.1 Маршрутизація
+        Використовую declarative routing с nested routes
+    1.2 Керування станом 
+        Використовую React Hooks ( useState, useMemo, useLocation(навігація))
+    1.3 Стилізація TailwindCSS
