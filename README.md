@@ -2,7 +2,7 @@
 Запуск проекта
 
  1. git clone <repo>
- 2. cd my-app
+ 2. cd testove-dashbord
  3. npm install
  4. npm run dev
 
